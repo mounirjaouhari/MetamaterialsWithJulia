@@ -1,0 +1,24 @@
+# Fichier de configuration pour la simulation acoustique 1D.
+# Ce fichier est lu par le script d'exemple pour paramétrer la simulation.
+
+title = "Transmission d'un empilement périodique (Air/Epoxy)"
+
+# Paramètres de la simulation
+n_periods = 8
+frequency_range = [100.0, 8000.0] # en Hz
+n_points = 500
+
+# Définition des couches de la cellule unitaire.
+# On peut ajouter autant de couches que l'on souhaite.
+
+[[layers]]
+name = "Air"
+density = 1.2      # kg/m^3
+celerity = 340.0   # m/s
+thickness = 0.01   # m
+
+[[layers]]
+name = "Epoxy"
+density = 1800.0
+celerity = 2600.0
+thickness = 0.005
