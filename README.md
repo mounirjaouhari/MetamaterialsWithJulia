@@ -1,51 +1,65 @@
 <div align="center">
 
-![MetamaterialsWithJulia Logo](./images/MetamaterialsWithJulia.jpg)
-
+MetamaterialsWithJulia
 </div>
 
-### ⚠️ Avertissement : Projet en Cours de Développement
+<div align="center">
+![MetamaterialsWithJulia Logo](./images/MetamaterialsWithJulia.png) 
+</div>
 
-**Ce dépôt est actuellement en cours de développement actif dans le cadre de mes travaux de thèse. Il s'agit d'un prototype de recherche et non d'un logiciel finalisé.**
+MetamaterialsWithJulia est un framework Julia modulaire et performant pour la simulation, l'analyse et l'optimisation de métamatériaux acoustiques, électromagnétiques et mécaniques.
 
-Le code est susceptible de subir des modifications importantes, des refactorisations ou des changements d'API sans préavis. Les fonctionnalités peuvent être incomplètes ou contenir des bogues. L'objectif principal de ce dépôt est de tester des idées et des algorithmes.
+⚠️ Avertissement : Projet de Recherche
+Ce dépôt est développé activement dans le cadre de travaux de thèse. Il s'agit d'un prototype de recherche et non d'un logiciel finalisé. Le code et les API sont susceptibles d'évoluer.
 
-## Description
+🚀 Fonctionnalités Clés
+L'architecture du projet est conçue pour être flexible et extensible :
 
-`MetamaterialsWithJulia` est un framework dont l'ambition est de fournir un environnement robuste et flexible pour la modélisation, l'analyse et l'optimisation de métamatériaux (acoustiques, électromagnétiques, mécaniques).
+Architecture Abstraite : Une API Problème / Solveur / Résultat permet de découpler la physique des méthodes numériques.
 
-L'architecture est conçue pour être modulaire, en séparant clairement la définition des problèmes physiques des solveurs numériques, afin de faciliter l'expérimentation et l'extension du code.
+Solveur FEM : Implémentation basée sur le puissant package Gridap.jl.
 
-## Installation
+Optimisation Avancée : Modules pour l'optimisation topologique et géométrique (par algorithme génétique).
 
-Pour utiliser ce projet, clonez le dépôt et instanciez l'environnement Julia. Cela installera toutes les dépendances listées dans le fichier `Project.toml`.
+Géométries Complexes : Importation de maillages .msh depuis des logiciels de CAO via Gmsh.jl.
 
-1.  **Clonez le dépôt :**
-    ```bash
-    git clone [https://github.com/votre-utilisateur/MetamaterialsWithJulia.git](https://github.com/votre-utilisateur/MetamaterialsWithJulia.git)
-    cd MetamaterialsWithJulia
-    ```
+Simulations Configurables : Les paramètres des simulations sont gérés via des fichiers .toml pour une meilleure reproductibilité.
 
-2.  **Installez les dépendances :**
-    Ouvrez une session Julia dans le dossier du projet et exécutez la commande suivante :
-    ```julia
-    using Pkg; Pkg.instantiate()
-    ```
-    Ou directement depuis votre terminal :
-    ```powershell
-    julia --project -e 'using Pkg; Pkg.instantiate()'
-    ```
+Visualisation Découplée : Des outils de traçage qui opèrent sur des objets de résultat standardisés.
 
-## Comment Exécuter les Exemples
+📦 Installation
+Pour commencer, clonez le dépôt et instanciez l'environnement du projet. Cela installera toutes les dépendances requises.
 
-Le dossier `examples/` contient plusieurs scripts pour démontrer les fonctionnalités du framework.
+# 1. Clonez le dépôt
+git clone [https://github.com/mounirjaouhari/MetamaterialsWithJulia.git](https://github.com/mounirjaouhari/MetamaterialsWithJulia.git)
+cd MetamaterialsWithJulia
 
-```powershell
-# Pour exécuter la simulation 1D à partir d'un fichier de configuration
+# 2. Installez les dépendances
+julia --project -e 'using Pkg; Pkg.instantiate()'
+
+📖 Exemples d'Utilisation
+Le dossier examples/ contient des scripts prêts à l'emploi pour tester les fonctionnalités.
+
+# Exécuter une simulation 1D à partir d'un fichier de configuration
 julia --project examples/1D_acoustic_periodic_from_config.jl
 
-# Pour calculer un diagramme de bandes 1D
+# Calculer et tracer un diagramme de bandes 1D
 julia --project examples/bands_1D_bloch.jl
 
-# Pour lancer une optimisation de géométrie
+# Lancer une optimisation de géométrie
 julia --project examples/optimize_geometry_GA.jl
+
+🧪 Lancer les Tests
+Pour vérifier l'intégrité du code, vous pouvez lancer la suite de tests :
+
+julia --project -e "using Pkg; Pkg.test()"
+
+📞 Contact
+Pour toute question ou discussion relative à ce projet de recherche, n'hésitez pas à me contacter :
+
+Mounir JAOUHARI
+
+Email : mounir.jaouhari-etu@etu.univh2c.ma
+
+📜 Licence
+Ce projet est distribué sous la Licence MIT. Voir le fichier LICENSE pour plus de détails.
