@@ -1,6 +1,3 @@
-Parfait 👍
-Voici ton fichier entièrement formaté en **Markdown pur**, prêt à être affiché proprement sur GitHub, avec titres, code blocks et mise en page centrée.
-
 ````markdown
 <div align="center">
 
