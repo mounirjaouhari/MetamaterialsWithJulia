@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="images/MetamaterialsWithJulia.png" alt="MetamaterialsWithJulia Logo" width="300"/>
+
 # MetamaterialsWithJulia
 
 </div>
